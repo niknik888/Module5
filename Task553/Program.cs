@@ -2,6 +2,8 @@
 
 class MainClass
 {
+    // Сценарий Эхо
+    /*
     static void Main(string[] args)
     {
         Console.WriteLine("Напишите что-то");
@@ -17,7 +19,7 @@ class MainClass
 
     static void Echo(string phrase, int deep)
     {
-        
+        Console.BackgroundColor = (ConsoleColor)deep;
         var modif = phrase;
         if (modif.Length > 2)
         {
@@ -29,6 +31,26 @@ class MainClass
         if (deep > 1)
         {
             Echo(modif, deep - 1);
+        }
+    }
+    */
+
+    // Сценарий Факториал
+    static void Main(string[] args)
+    {
+        decimal res = Factorial(20);
+        Console.WriteLine(res);
+    }
+        
+        static decimal Factorial(int x)
+    {
+        if (x == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return x * Factorial(x - 1);
         }
     }
 }
